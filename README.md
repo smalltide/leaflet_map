@@ -10,4 +10,5 @@ use python3, Folium and OpenStreetMap to create a leaflet map
 ```
   > git@github.com:smalltide/leaflet_map.git
   > cd leaflet_map
+  > pip3 install folium
 ```
