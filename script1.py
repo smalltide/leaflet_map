@@ -3,12 +3,15 @@ import pandas
 
 df = pandas.read_csv('Volcanoes-USA.txt')
 
-map = folium.Map(location = [45.372, -121.697], zoom_start = 4, tiles = 'stamen Terrain' )
+map = folium.Map(location = [df['LAT'].mean(), df['LON'].mean()], zoom_start = 4, tiles = 'stamen Terrain' )
 
 def color(elev):
-    if elev in range(0, 1000):
+    minimum = int(df['ELEV'].min())
+    step = int((df['ELEV'].max() - df['ELEV'].min()) / 3)
+
+    if elev in range(minimum, minimum + step):
         col = 'green'
-    elif elev in range(1000, 3000):
+    elif elev in range(minimum + step, minimum + step * 2):
         col = 'orange'
     else:
         col = 'red'
