@@ -13,4 +13,6 @@ use python3, Folium and OpenStreetMap to create a leaflet map
   > cd leaflet_map
   > pip3 install folium
   > pip3 install pandas
+  > python3 map.py
+  > Browser open map.html
 ```

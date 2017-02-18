@@ -32,4 +32,4 @@ map.add_child(folium.GeoJson(
 
 map.add_child(folium.LayerControl())
 
-map.save(outfile = 'test.html')
+map.save(outfile = 'map.html')
